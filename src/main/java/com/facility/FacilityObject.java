@@ -106,6 +106,34 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
         this.maintenances.add(maintenance);
     }
 
+    public Date getCreated() {
+        return created;
+    }
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+    public int getCapacity() {
+        return capacity;
+    }
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+    public Status getStatus() {
+        return status;
+    }
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+    public List<Facility> getFacilities() {
+        return facilities;
+    }
+
+    @Override
+    public String toString() {
+        return;
+    }
+
+
 
 
 
