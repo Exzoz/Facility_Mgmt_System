@@ -34,5 +34,9 @@ public class FacilityProblem {
         this.solved = solved;
     }
 
-   
+    @Override
+    public String toString() {
+        return "FacilityProblem [created=" + created + ", description="
+                + description + ", solved=" + solved + "]";
+    }
 }
