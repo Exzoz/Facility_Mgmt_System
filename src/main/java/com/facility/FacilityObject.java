@@ -45,8 +45,8 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
     }
     @Override
     public Facility addNewFacility(Facility facility) {
-        // TODO still
-        return null;
+        this.facilities.add(facility);
+        return this;
     }
     @Override
     public Facility addFacilityDetail(FacilityDetail facilityDetail) {
@@ -55,8 +55,8 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
     }
     @Override
     public Facility removeFacility(Facility facility) {
-        // TODO still
-        return null;
+        this.facilities.remove(facility);
+        return this;
     }
 
     @Override
