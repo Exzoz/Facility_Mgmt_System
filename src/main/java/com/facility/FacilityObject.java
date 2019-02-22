@@ -21,16 +21,6 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     public FacilityObject() {}
 
-    public FacilityObject(FacilityDetail facilityDetail, Date created,
-                          int capacity, FacilityStatus status, List<Facility> facilities) {
-        this.facilityDetail = facilityDetail;
-        this.created = created;
-        this.capacity = capacity;
-        this.status = status;
-        this.facilities = facilities;
-    }
-
-    
     @Override
     public List<Facility> listFacilities() {
         // TODO still
@@ -87,7 +77,7 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
     }
 
     @Override
-    public List<FacilityUsage> listActualUsage() {
+    public List<> listActualUsage() {
         // TODO still
         return null;
     }
