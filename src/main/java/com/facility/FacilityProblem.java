@@ -14,3 +14,25 @@ public class FacilityProblem {
         this.description = description;
         this.solved = solved;
     }
+
+    public Date getCreated() {
+        return created;
+    }
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public boolean isSolved() {
+        return solved;
+    }
+    public void setSolved(boolean solved) {
+        this.solved = solved;
+    }
+
+   
+}
