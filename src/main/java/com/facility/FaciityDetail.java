@@ -37,7 +37,8 @@ public class FacilityDetail {
 
     @Override
     public String toString() {
-        return
+        return "FacilityDetail [created=" + created + ", name=" + name
+                + ", description=" + description + "]";
     }
 }
 

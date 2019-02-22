@@ -49,9 +49,9 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
         return this;
     }
     @Override
-    public Facility addFacilityDetail(FacilityDetail facilityDetail) {
-        // TODO still
-        return null;
+    public Facility addFacilityDetail(String name, String description) {
+        this.facilityDetails.add(new FacilityDetail(new Date(), name, description));
+        return this;
     }
     @Override
     public Facility removeFacility(Facility facility) {
@@ -79,14 +79,12 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public List<Inspection> listInspections() {
-        // TODO still
-        return null;
+        return inspections;
     }
 
     @Override
-    public List<> listActualUsage() {
-        // TODO still
-        return null;
+    public List<Usage> listActualUsage() {
+        return usages;
     }
 
     @Override
@@ -94,5 +92,25 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
         // TODO still
         return 0;
     }
+
+    @Override
+    public MaintenanceRequest makeFacilityMaintRequest() {
+        MaintenanceRequest request = new MaintenanceRequest();
+        this.maintenanceRequests.add(request);
+        return request;
+    }
+
+    @Override
+    public void scheduleMaintenance(Date date) {
+        Maintenance maintenance = new Maintenance(date);
+        this.maintenances.add(maintenance);
+    }
+
+
+
+
+
+
+
 
 }
