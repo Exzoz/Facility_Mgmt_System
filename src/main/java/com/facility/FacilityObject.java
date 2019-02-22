@@ -23,18 +23,25 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public List<Facility> listFacilities() {
-        // TODO still
-        return null;
+        for(Facility facility: facilities) {
+            System.out.println(facility);
+        }
+        return facilities;
     }
     @Override
     public Facility getFacilityInformation() {
-        // TODO still
-        return null;
+        System.out.println(this);
+        return this;
     }
     @Override
-    public void requestAvailableCapacity() {
-        // TODO still
-
+    public int requestAvailableCapacity() {
+        //calculating total capacity as a sum
+        //we need to be careful to not make a loop when assigning facilities
+        int total = capacity;
+        for(Facility facility: facilities) {
+            total += facility.requestAvailableCapacity();
+        }
+        return total;
     }
     @Override
     public Facility addNewFacility(Facility facility) {
