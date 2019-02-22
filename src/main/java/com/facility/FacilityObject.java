@@ -106,6 +106,38 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
         this.maintenances.add(maintenance);
     }
 
+    @Override
+    public int calcMaintenanceCostForFacility() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int calcProblemRateForFacility() {
+
+    }
+
+    @Override
+    public long calcDownTimeForFacility() {
+
+    }
+
+    @Override
+    public List<MaintenanceRequest> listMaintRequests() {
+
+    }
+
+    @Override
+    public List<Maintenance> listMaintenance() {
+
+    }
+
+    @Override
+    public List<FacilityProblem> listFacilityProblems() {
+
+    }
+
+
     public Date getCreated() {
         return created;
     }
