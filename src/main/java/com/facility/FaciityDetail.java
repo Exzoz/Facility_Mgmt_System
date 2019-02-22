@@ -8,12 +8,9 @@ public class FacilityDetail {
     private String name;
     private String description;
 
-    public FacilityDetail() {
-
-    }
+    public FacilityDetail() {}
 
     public FacilityDetail(Date created, String name, String description) {
-        super();
         this.created = created;
         this.name = name;
         this.description = description;
@@ -38,6 +35,10 @@ public class FacilityDetail {
         this.description = description;
     }
 
-
+    @Override
+    public String toString() {
+        return
+    }
 }
+
 

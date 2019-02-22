@@ -1,12 +1,18 @@
 package com.facility;
+
 import java.util.List;
 
 
 public interface Facility {
     List<Facility> listFacilities();
+
     Facility getFacilityInformation();
-    void requestAvailableCapacity();
+
+    int requestAvailableCapacity();
+
     Facility addNewFacility(Facility facility);
-    Facility addFacilityDetail(FacilityDetail facilityDetail);
+
+    Facility addFacilityDetail(String name, String description);
+
     Facility removeFacility(Facility facility);
 }
