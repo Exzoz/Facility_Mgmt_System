@@ -1,20 +1,25 @@
 package com.facility;
 
+import java.time.Period;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 
-public class FacilityObject implements Facility, FacilityUse {
+public class FacilityObject implements Facility, FacilityUse, FacilityMaintenance {
 
-    protected FacilityDetail facilityDetail;
-    protected Date created;
-    protected int capacity;
-    protected FacilityStatus status;
-    protected List<Facility> facilities;
+    private Date created;
+    private int capacity;
+    private Status status;
+    private List<Facility> facilities;
+    private List<Usage> usages;
+    private List<FacilityDetail> facilityDetails;
+    private List<Maintenance> maintenances;
+    private List<FacilityProblem> facilityProblems;
+    private List<MaintenanceRequest> maintenanceRequests;
+    private List<Inspection> inspections;
 
-    public FacilityObject() {
-        super();
-    }
+    public FacilityObject() {}
 
     public FacilityObject(FacilityDetail facilityDetail, Date created,
                           int capacity, FacilityStatus status, List<Facility> facilities) {
@@ -25,36 +30,7 @@ public class FacilityObject implements Facility, FacilityUse {
         this.facilities = facilities;
     }
 
-    public FacilityDetail getFacilityDetail() {
-        return facilityDetail;
-    }
-    public void setFacilityDetail(FacilityDetail facilityDetail) {
-        this.facilityDetail = facilityDetail;
-    }
-    public Date getCreated() {
-        return created;
-    }
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-    public int getCapacity() {
-        return capacity;
-    }
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-    public FacilityStatus getStatus() {
-        return status;
-    }
-    public void setStatus(FacilityStatus status) {
-        this.status = status;
-    }
-    public List<Facility> getFacilities() {
-        return facilities;
-    }
-    public void setFacilities(List<Facility> facilities) {
-        this.facilities = facilities;
-    }
+    
     @Override
     public List<Facility> listFacilities() {
         // TODO still
