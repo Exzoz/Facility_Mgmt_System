@@ -6,6 +6,8 @@ public class Inspection {
     private Date created;
     private boolean problemFound;
 
+    public Inspection() []
+
     public Inspection(Date created, boolean problemFound) {
         this.created = created;
         this.problemFound = problemFound;
@@ -22,7 +24,12 @@ public class Inspection {
     public void setProblemFound(boolean problemFound) {
         this.problemFound = problemFound;
     }
-
-
+    @Override
+    public String toString() {
+        return "Inspection [created=" + created + ", problemFound="
+                + problemFound + "]";
+    }
 }
+
+
 
