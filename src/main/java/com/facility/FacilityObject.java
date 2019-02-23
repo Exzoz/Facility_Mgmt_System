@@ -1,9 +1,9 @@
 package com.facility;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 
 public class FacilityObject implements Facility, FacilityUse, FacilityMaintenance {
 
@@ -250,6 +250,14 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     public void setMaintenanceRequests(List<MaintenanceRequest> maintenanceRequests) {
         this.maintenanceRequests = maintenanceRequests;
+    }
+
+    public List<Inspection> getInspections() {
+        return inspections;
+    }
+
+    public void setInspections(List<Inspection> inspections) {
+        this.inspections = inspections;
     }
 
 
