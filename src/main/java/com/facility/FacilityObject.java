@@ -21,6 +21,20 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     public FacilityObject() {}
 
+    public FacilityObject(int capacity) {
+        this.created = new Date();
+        this.capacity = capacity;
+        this.status = Status.FREE;
+        this.facilities = new ArrayList<>();
+        this.usages = new ArrayList<>();
+        this.facilityDetails = new ArrayList<>();
+        this.maintenances = new ArrayList<>();
+        this.facilityProblems = new ArrayList<>();
+        this.maintenanceRequests = new ArrayList<>();
+        this.inspections = new ArrayList<>();
+    }
+
+
     @Override
     public List<Facility> listFacilities() {
         for(Facility facility: facilities) {

@@ -2,7 +2,6 @@ package com.facility;
 
 import java.util.Date;
 
-
 public class FacilityDetail {
     private Date created;
     private String name;
