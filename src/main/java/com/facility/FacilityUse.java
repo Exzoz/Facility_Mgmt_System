@@ -8,7 +8,7 @@ public interface FacilityUse {
 
     void assignFacilityToUse();
 
-    Facility vacateFacility();
+    void vacateFacility();
 
     List<Inspection> listInspections();
 
