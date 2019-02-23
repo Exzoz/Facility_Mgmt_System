@@ -36,13 +36,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="53" />
+          <entry key="java" value="61" />
           <entry key="txt" value="304" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="53" />
+          <entry key="JAVA" value="61" />
           <entry key="PLAIN_TEXT" value="304" />
         </counts>
       </usages-collector>
@@ -53,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/FacilityObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="186" column="22" lean-forward="true" selection-start-line="186" selection-start-column="22" selection-end-line="186" selection-end-column="22" />
+            <state relative-caret-position="3420">
+              <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2152#2153#0" expanded="true" />
@@ -75,12 +75,24 @@
                 <element signature="e#3184#3185#0" expanded="true" />
                 <element signature="e#3228#3229#0" expanded="true" />
                 <element signature="e#3261#3262#0" expanded="true" />
+                <element signature="e#4919#4920#0" expanded="true" />
+                <element signature="e#4963#4964#0" expanded="true" />
                 <element signature="e#4897#4898#0" expanded="true" />
                 <element signature="e#4926#4927#0" expanded="true" />
+                <element signature="e#5079#5080#0" expanded="true" />
+                <element signature="e#5115#5116#0" expanded="true" />
                 <element signature="e#4982#4983#0" expanded="true" />
                 <element signature="e#5020#5021#0" expanded="true" />
+                <element signature="e#5285#5286#0" expanded="true" />
+                <element signature="e#5339#5340#0" expanded="true" />
                 <element signature="e#5070#5071#0" expanded="true" />
                 <element signature="e#5105#5106#0" expanded="true" />
+                <element signature="e#5491#5492#0" expanded="true" />
+                <element signature="e#5539#5540#0" expanded="true" />
+                <element signature="e#5597#5598#0" expanded="true" />
+                <element signature="e#5636#5637#0" expanded="true" />
+                <element signature="e#5835#5836#0" expanded="true" />
+                <element signature="e#5877#5878#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -464,8 +476,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="37" />
-    <option name="y" value="23" />
+    <option name="x" value="198" />
+    <option name="y" value="24" />
     <option name="width" value="1021" />
     <option name="height" value="877" />
   </component>
@@ -537,7 +549,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550882020817" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550883722639" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -633,13 +645,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16040000" />
+    <option name="totallyTimeSpent" value="17144000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="23" width="1021" height="877" extended-state="0" />
+    <frame x="198" y="24" width="1021" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19713993" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19713993" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -861,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/FacilityObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="186" column="22" lean-forward="true" selection-start-line="186" selection-start-column="22" selection-end-line="186" selection-end-column="22" />
+        <state relative-caret-position="3420">
+          <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2152#2153#0" expanded="true" />
@@ -883,12 +895,24 @@
             <element signature="e#3184#3185#0" expanded="true" />
             <element signature="e#3228#3229#0" expanded="true" />
             <element signature="e#3261#3262#0" expanded="true" />
+            <element signature="e#4919#4920#0" expanded="true" />
+            <element signature="e#4963#4964#0" expanded="true" />
             <element signature="e#4897#4898#0" expanded="true" />
             <element signature="e#4926#4927#0" expanded="true" />
+            <element signature="e#5079#5080#0" expanded="true" />
+            <element signature="e#5115#5116#0" expanded="true" />
             <element signature="e#4982#4983#0" expanded="true" />
             <element signature="e#5020#5021#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5339#5340#0" expanded="true" />
             <element signature="e#5070#5071#0" expanded="true" />
             <element signature="e#5105#5106#0" expanded="true" />
+            <element signature="e#5491#5492#0" expanded="true" />
+            <element signature="e#5539#5540#0" expanded="true" />
+            <element signature="e#5597#5598#0" expanded="true" />
+            <element signature="e#5636#5637#0" expanded="true" />
+            <element signature="e#5835#5836#0" expanded="true" />
+            <element signature="e#5877#5878#0" expanded="true" />
           </folding>
         </state>
       </provider>

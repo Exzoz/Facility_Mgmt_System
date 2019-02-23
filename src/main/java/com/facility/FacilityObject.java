@@ -183,17 +183,50 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
         return facilities;
     }
 
+    public void setFacilities(List<Facility> facilities) {
+        this.facilities = facilities;
+    }
+
     public List<Usage> getUsages() {
         return usages;
+    }
+
+    public void setUsages(List<Usage> usages) {
+        this.usages = usages;
     }
 
     public List<FacilityDetail> getFacilityDetails() {
         return facilityDetails;
     }
 
+    public void setFacilityDetails(List<FacilityDetail> facilityDetails) {
+        this.facilityDetails = facilityDetails;
+    }
+
     public List<Maintenance> getMaintenances() {
         return maintenances;
     }
+
+    public void setMaintenances(List<Maintenance> maintenances) {
+        this.maintenances = maintenances;
+    }
+
+    public List<FacilityProblem> getFacilityProblems() {
+        return facilityProblems;
+    }
+
+    public void setFacilityProblems(List<FacilityProblem> facilityProblems) {
+        this.facilityProblems = facilityProblems;
+    }
+
+    public List<MaintenanceRequest> getMaintenanceRequests() {
+        return maintenanceRequests;
+    }
+
+    public void setMaintenanceRequests(List<MaintenanceRequest> maintenanceRequests) {
+        this.maintenanceRequests = maintenanceRequests;
+    }
+
 
     @Override
     public String toString() {
