@@ -6,7 +6,7 @@ public class Inspection {
     private Date created;
     private boolean problemFound;
 
-    public Inspection() []
+    public Inspection() {}
 
     public Inspection(Date created, boolean problemFound) {
         this.created = created;

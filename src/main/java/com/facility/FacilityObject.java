@@ -1,8 +1,7 @@
 package com.facility;
 
-import java.time.Period;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -75,8 +74,18 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public boolean isInUseDuringInterval(Date start, Date end) {
-        // TODO still
+        for(Usage usage: usages) {
+            if (dateBetween(usage.getStartDate(), start, end) ||  //if start date is between start and end
+                    dateBetween(usage.getEndDate(), start, end) || //if end date is between start and end
+                    (usage.getStartDate().before(start) && usage.getEndDate().after(end))) { //if usage start before start and usage end after end
+                return true;
+            }
+        }
         return false;
+    }
+
+    private boolean dateBetween(Date d, Date min, Date max) {
+        return d.after(min) && d.before(max);
     }
 
     @Override
