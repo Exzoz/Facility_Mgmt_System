@@ -130,8 +130,11 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public int calcMaintenanceCostForFacility() {
-        // TODO Auto-generated method stub
-        return 0;
+        int total = 0;
+        for (Maintenance maintenance: maintenances) {
+            total += maintenance.getCost();
+        }
+        return total;
     }
 
     @Override
