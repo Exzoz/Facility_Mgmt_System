@@ -140,12 +140,18 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public List<MaintenanceRequest> listMaintRequests() {
-
+        for (MaintenanceRequest maintenanceRequest : maintenanceRequests) {
+            System.out.println(maintenanceRequest);
+        }
+        return maintenanceRequests;
     }
 
     @Override
     public List<Maintenance> listMaintenance() {
-
+        for (Maintenance maintenance : maintenances) {
+            System.out.println(maintenance);
+        }
+        return maintenances;
     }
 
     @Override
