@@ -183,17 +183,26 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
         return facilities;
     }
 
-    @Override
-    public String toString() {
-        return;
+    public List<Usage> getUsages() {
+        return usages;
     }
 
+    public List<FacilityDetail> getFacilityDetails() {
+        return facilityDetails;
+    }
 
+    public List<Maintenance> getMaintenances() {
+        return maintenances;
+    }
 
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "FacilityObject [created=" + created + ", capacity=" + capacity
+                + ", status=" + status + ", facilities=" + facilities
+                + ", usages=" + usages + ", facilityDetails=" + facilityDetails
+                + ", maintenances=" + maintenances + ", facilityProblems="
+                + facilityProblems + ", maintenanceRequests="
+                + maintenanceRequests + "]";
+    }
 
 }
