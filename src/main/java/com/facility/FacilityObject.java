@@ -114,13 +114,29 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public int calcProblemRateForFacility() {
-
+        int totalInspectionWithProblem = 0;
+        for (Inspection inspection: inspections) {
+            if (inspection.isProblemFound()) {
+                totalInspectionWithProblem++;
+            }
+        }
+        if (totalInspectionWithProblem == 0) {
+            return 0;
+        } else {
+            return inspections.size() / totalInspectionWithProblem;
+        }
     }
 
     @Override
     public long calcDownTimeForFacility() {
-
+        //it will return the number in hours
+        long total = 0;
+        for(Maintenance maintenance: maintenances) {
+            total += (maintenance.getEnd().getTime() - maintenance.getStart().getTime()) / 1000;
+        }
+        return total / 3600;
     }
+
 
     @Override
     public List<MaintenanceRequest> listMaintRequests() {
@@ -134,10 +150,11 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public List<FacilityProblem> listFacilityProblems() {
-
+        for (FacilityProblem facilityProblem : facilityProblems) {
+            System.out.println(facilityProblem);
+        }
+        return facilityProblems;
     }
-
-
     public Date getCreated() {
         return created;
     }
