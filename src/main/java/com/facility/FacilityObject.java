@@ -90,14 +90,12 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public void assignFacilityToUse() {
-        // TODO still
-
+        this.status = Status.IN_USE;
     }
 
     @Override
-    public Facility vacateFacility() {
-        // TODO still
-        return null;
+    public void vacateFacility() {
+        this.status = Status.FREE;
     }
 
     @Override
@@ -112,10 +110,11 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public double calcUsageRate() {
-        // TODO still
-        return 0;
+        if (usages.size() == 0) {
+            return 0;
+        }
+        return usages.size() + maintenances.size() / usages.size();
     }
-
     @Override
     public MaintenanceRequest makeFacilityMaintRequest() {
         MaintenanceRequest request = new MaintenanceRequest();
