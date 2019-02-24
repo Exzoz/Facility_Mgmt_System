@@ -1,4 +1,8 @@
-package com.facility;
+package com.facility.model;
+
+import com.facility.interfaces.Facility;
+import com.facility.interfaces.FacilityMaintenance;
+import com.facility.interfaces.FacilityUse;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -109,12 +113,18 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
     }
 
     @Override
-    public double calcUsageRate() {
+    public String calcUsageRate() {
         if (usages.size() == 0) {
-            return 0;
+            return "0";
         }
-        return usages.size() + maintenances.size() / usages.size();
+        return calculatePercentage(usages.size(), usages.size() + maintenances.size());
     }
+
+    private String calculatePercentage(double obtained, double total) {
+        DecimalFormat df = new DecimalFormat("#.00"); // format to two decimals
+        return df.format(obtained * 100 / total);
+    }
+
     @Override
     public MaintenanceRequest makeFacilityMaintRequest() {
         MaintenanceRequest request = new MaintenanceRequest();
@@ -138,7 +148,7 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
     }
 
     @Override
-    public int calcProblemRateForFacility() {
+    public String calcProblemRateForFacility() {
         int totalInspectionWithProblem = 0;
         for (Inspection inspection: inspections) {
             if (inspection.isProblemFound()) {
@@ -146,11 +156,12 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
             }
         }
         if (totalInspectionWithProblem == 0) {
-            return 0;
+            return "0";
         } else {
-            return inspections.size() / totalInspectionWithProblem;
+            return calculatePercentage(totalInspectionWithProblem, inspections.size());
         }
     }
+
 
     @Override
     public long calcDownTimeForFacility() {

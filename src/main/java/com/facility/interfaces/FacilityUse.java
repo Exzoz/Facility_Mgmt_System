@@ -1,4 +1,7 @@
-package com.facility;
+package com.facility.interfaces;
+import com.facility.model.Inspection;
+import com.facility.model.Usage;
+
 import java.util.Date;
 import java.util.List;
 
@@ -14,5 +17,5 @@ public interface FacilityUse {
 
     List<Usage> listActualUsage();
 
-    double calcUsageRate();
+    String calcUsageRate();
 }

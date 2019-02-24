@@ -1,4 +1,8 @@
-package com.facility;
+package com.facility.interfaces;
+
+import com.facility.model.FacilityProblem;
+import com.facility.model.Maintenance;
+import com.facility.model.MaintenanceRequest;
 
 import java.util.Date;
 import java.util.List;
@@ -12,7 +16,7 @@ public interface FacilityMaintenance {
 
     int calcMaintenanceCostForFacility();
 
-    int calcProblemRateForFacility();
+    String calcProblemRateForFacility();
 
     long calcDownTimeForFacility();
 

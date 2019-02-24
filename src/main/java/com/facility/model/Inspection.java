@@ -1,4 +1,4 @@
-package com.facility;
+package com.facility.model;
 
 import java.util.Date;
 

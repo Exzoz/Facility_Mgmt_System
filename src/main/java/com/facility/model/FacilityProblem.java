@@ -1,18 +1,18 @@
-package com.facility;
+package com.facility.model;
 
 import java.util.Date;
 
-public class FacilityDetail {
+public class FacilityProblem {
     private Date created;
-    private String name;
     private String description;
+    private boolean solved;
 
-    public FacilityDetail() {}
+    public FacilityProblem(){}
 
-    public FacilityDetail(Date created, String name, String description) {
+    public FacilityProblem(Date created, String description, boolean solved) {
         this.created = created;
-        this.name = name;
         this.description = description;
+        this.solved = solved;
     }
 
     public Date getCreated() {
@@ -21,24 +21,22 @@ public class FacilityDetail {
     public void setCreated(Date created) {
         this.created = created;
     }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
     public String getDescription() {
         return description;
     }
     public void setDescription(String description) {
         this.description = description;
     }
+    public boolean isSolved() {
+        return solved;
+    }
+    public void setSolved(boolean solved) {
+        this.solved = solved;
+    }
 
     @Override
     public String toString() {
-        return "FacilityDetail [created=" + created + ", name=" + name
-                + ", description=" + description + "]";
+        return "FacilityProblem [created=" + created + ", description="
+                + description + ", solved=" + solved + "]";
     }
 }
-
-

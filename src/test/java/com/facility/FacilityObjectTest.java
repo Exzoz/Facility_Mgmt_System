@@ -1,5 +1,7 @@
 package com.facility;
 
+import com.facility.interfaces.Facility;
+import com.facility.model.FacilityObject;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.facility;
+package com.facility.interfaces;
 
 import java.util.List;
 
