@@ -5,8 +5,8 @@ import com.facility.model.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
 import java.util.Date;
+import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -68,15 +68,15 @@ public class FacilityObjectTest {
     }
 
     @Test
-    public void isInUseDuringIntervalTest() {
-    }
-
-    @Test
     public void assignFacilityToUseTest() {
+        facilityObject.assignFacilityToUse();
+        assertThat(facilityObject.getStatus(), is(Status.IN_USE));
     }
 
     @Test
     public void vacateFacilityTest() {
+        facilityObject.vacateFacility();
+        assertThat(facilityObject.getStatus(), is(Status.FREE));
     }
 
     @Test
@@ -137,9 +137,6 @@ public class FacilityObjectTest {
         String result = facilityObject.calcProblemRateForFacility();
         assertThat(result, is("75.00"));
     }
-    @Test
-    public void calcDownTimeForFacilityTest() {
-    }
 
     @Test
     public void listMaintRequestsTest() {
@@ -158,3 +155,4 @@ public class FacilityObjectTest {
         List<FacilityProblem> facilityProblems = facilityObject.listFacilityProblems();
         assertEquals(facilityProblems, facilityObject.getFacilityProblems());
     }
+}
