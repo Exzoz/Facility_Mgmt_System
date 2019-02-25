@@ -91,7 +91,18 @@ public class FacilityObjectTest {
     }
 
     @Test
-    public void calcUsageRateTest() {
+    public void calcUsageRateNoUsageTest() {
+        String result = facilityObject.calcUsageRate();
+        assertThat(result, is("0"));
+    }
+
+    @Test
+    public void calcUsageRateWithUsageTest() {
+        facilityObject.getUsages().add(new Usage());
+        facilityObject.getUsages().add(new Usage());
+        facilityObject.getMaintenances().add(new Maintenance());
+        String result = facilityObject.calcUsageRate();
+        assertThat(result, is("66.67"));
     }
 
     @Test
