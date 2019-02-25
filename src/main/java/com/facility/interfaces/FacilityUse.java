@@ -1,7 +1,6 @@
 package com.facility.interfaces;
 
-import com.facility.model.Inspection;
-import com.facility.model.Usage;
+import com.facility.model.*;
 
 import java.util.Date;
 import java.util.List;

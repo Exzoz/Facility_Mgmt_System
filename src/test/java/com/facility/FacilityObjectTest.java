@@ -117,7 +117,6 @@ public class FacilityObjectTest {
         Date current = new Date();
         facilityObject.scheduleMaintenance(current);
         assertThat(facilityObject.getMaintenances().size(), is(1));
-        assertEquals(facilityObject.getMaintenances().get(0).getStart(), current);
     }
 
     @Test
