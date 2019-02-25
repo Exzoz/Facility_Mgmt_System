@@ -4,6 +4,7 @@ import com.facility.model.FacilityObject;
 import com.facility.model.Inspection;
 import com.facility.model.Maintenance;
 import com.facility.model.Usage;
+import com.facility.persistence.SerializeUtils;
 
 import java.util.Date;
 
@@ -18,6 +19,25 @@ public class Runner {
         System.out.println("Listing facilities");
         facility.listFacilities();
         facility.assignFacilityToUse();
+
+        System.out.println("Adding Usage");
+        facility.getUsages().add(new Usage());
+        System.out.println("Adding Usage");
+        facility.getUsages().add(new Usage());
+        System.out.println("Adding Maintenance");
+        facility.getMaintenances().add(new Maintenance());
+        System.out.println("Usage rate: " + facility.calcUsageRate());
+
+        Maintenance maintenance1 = new Maintenance(new Date(), null, 3);
+        facility.getMaintenances().add(maintenance1);
+        System.out.println("Adding maintenance:" + maintenance1);
+        Maintenance maintenance2 = new Maintenance(new Date(), null, 4);
+        facility.getMaintenances().add(maintenance2);
+        System.out.println("Adding maintenance:" + maintenance2);
+        Maintenance maintenance3 = new Maintenance(new Date(), null, 5);
+        facility.getMaintenances().add(maintenance3);
+        System.out.println("Adding maintenance:" + maintenance3);
+        System.out.println("Maintenance cost: " + facility.calcMaintenanceCostForFacility());
 
 
     }
