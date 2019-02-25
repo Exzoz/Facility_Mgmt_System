@@ -22,3 +22,18 @@ public class SerializeUtils {
             ex.printStackTrace();
         }
     }
+
+    public static FacilityObject loadFacility() {
+        try {
+            // reading object from file
+            FileInputStream fis = new FileInputStream("save.db");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            FacilityObject result = (FacilityObject) ois.readObject();
+            ois.close();
+            return result;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    }
+}

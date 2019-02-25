@@ -1,4 +1,5 @@
 package com.facility.interfaces;
+
 import com.facility.model.Inspection;
 import com.facility.model.Usage;
 

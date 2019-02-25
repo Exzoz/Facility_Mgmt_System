@@ -1,9 +1,10 @@
 package com.facility.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
-public class Usage {
+public class Usage implements Serializable {
     Date startDate;
     Date endDate;
 
@@ -32,7 +33,10 @@ public class Usage {
 
     @Override
     public String toString() {
-        return "Usage [startDate=" + startDate + ", endDate=" + endDate + "]";
+        return "Usage{" +
+                "startDate=" + startDate +
+                ", endDate=" + endDate +
+                '}';
     }
 }
 

@@ -51,6 +51,13 @@ public class Runner {
         System.out.println("Adding inspection:" + inspection3);
         System.out.println("Problem rate: " + facility.calcProblemRateForFacility());
 
+        System.out.println("Saving facility object: " + facility);
+        SerializeUtils.saveFacility(facility);
 
+        System.out.println("Loading facility object");
+        FacilityObject loadedObject = SerializeUtils.loadFacility();
+        System.out.println("Loaded facility object:" + loadedObject);
     }
 }
+
+

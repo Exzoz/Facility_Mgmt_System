@@ -1,8 +1,9 @@
 package com.facility.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class MaintenanceRequest {
+public class MaintenanceRequest implements Serializable {
     private Date created;
 
     public MaintenanceRequest() {
@@ -23,7 +24,9 @@ public class MaintenanceRequest {
 
     @Override
     public String toString() {
-        return "MainteinanceRequest [created=" + created + "]";
+        return "MaintenanceRequest{" +
+                "created=" + created +
+                '}';
     }
 
 }

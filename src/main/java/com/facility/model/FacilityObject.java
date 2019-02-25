@@ -4,12 +4,13 @@ import com.facility.interfaces.Facility;
 import com.facility.interfaces.FacilityMaintenance;
 import com.facility.interfaces.FacilityUse;
 
+import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class FacilityObject implements Facility, FacilityUse, FacilityMaintenance {
+public class FacilityObject implements Facility, FacilityUse, FacilityMaintenance, Serializable {
 
     private Date created;
     private int capacity;
@@ -21,8 +22,6 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
     private List<FacilityProblem> facilityProblems;
     private List<MaintenanceRequest> maintenanceRequests;
     private List<Inspection> inspections;
-
-    public FacilityObject() {}
 
     public FacilityObject(int capacity) {
         this.created = new Date();
@@ -274,12 +273,18 @@ public class FacilityObject implements Facility, FacilityUse, FacilityMaintenanc
 
     @Override
     public String toString() {
-        return "FacilityObject [created=" + created + ", capacity=" + capacity
-                + ", status=" + status + ", facilities=" + facilities
-                + ", usages=" + usages + ", facilityDetails=" + facilityDetails
-                + ", maintenances=" + maintenances + ", facilityProblems="
-                + facilityProblems + ", maintenanceRequests="
-                + maintenanceRequests + "]";
+        return "FacilityObject{" +
+                "created=" + created +
+                ", capacity=" + capacity +
+                ", status=" + status +
+                ", facilities=" + facilities +
+                ", usages=" + usages +
+                ", facilityDetails=" + facilityDetails +
+                ", maintenances=" + maintenances +
+                ", facilityProblems=" + facilityProblems +
+                ", maintenanceRequests=" + maintenanceRequests +
+                ", inspections=" + inspections +
+                '}';
     }
 
 }

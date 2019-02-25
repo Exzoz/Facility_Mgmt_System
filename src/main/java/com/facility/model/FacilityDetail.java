@@ -1,8 +1,9 @@
 package com.facility.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class FacilityDetail {
+public class FacilityDetail implements Serializable {
     private Date created;
     private String name;
     private String description;
@@ -36,8 +37,11 @@ public class FacilityDetail {
 
     @Override
     public String toString() {
-        return "FacilityDetail [created=" + created + ", name=" + name
-                + ", description=" + description + "]";
+        return "FacilityDetail{" +
+                "created=" + created +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
 

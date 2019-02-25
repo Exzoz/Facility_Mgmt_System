@@ -1,8 +1,9 @@
 package com.facility.model;
 
 import java.util.Date;
+import java.io.Serializable;
 
-public class Inspection {
+public class Inspection implements Serializable {
     private Date created;
     private boolean problemFound;
 
@@ -26,8 +27,10 @@ public class Inspection {
     }
     @Override
     public String toString() {
-        return "Inspection [created=" + created + ", problemFound="
-                + problemFound + "]";
+        return "Inspection{" +
+                "created=" + created +
+                ", problemFound=" + problemFound +
+                '}';
     }
 }
 

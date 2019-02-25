@@ -1,9 +1,10 @@
 package com.facility.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
-public class Maintenance {
+public class Maintenance implements Serializable  {
     private Date start;
     private Date end;
     private int cost;
@@ -41,8 +42,11 @@ public class Maintenance {
 
     @Override
     public String toString() {
-        return "Maintenance [start=" + start + ", end=" + end + ", cost="
-                + cost + "]";
+        return "Maintenance{" +
+                "start=" + start +
+                ", end=" + end +
+                ", cost=" + cost +
+                '}';
     }
 
 }
