@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -155,4 +156,20 @@ public class FacilityObjectTest {
         List<FacilityProblem> facilityProblems = facilityObject.listFacilityProblems();
         assertEquals(facilityProblems, facilityObject.getFacilityProblems());
     }
+
+    @Test
+    public void calcDownTimeForFacilityTest() {
+        Date date = new Date();
+        Calendar cal = Calendar.getInstance(); // creates calendar
+        cal.setTime(date); // sets calendar time and date
+        cal.add(Calendar.HOUR_OF_DAY, 5); // adds 5 hours
+        Date datePlusFiveHours = cal.getTime();
+        Maintenance maintenance = new Maintenance();
+        maintenance.setStart(date);
+        maintenance.setEnd(datePlusFiveHours);
+        facilityObject.getMaintenances().add(maintenance);
+        long result = facilityObject.calcDownTimeForFacility();
+        assertThat(result, is(5L));
+    }
+
 }
