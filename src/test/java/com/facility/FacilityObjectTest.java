@@ -79,10 +79,13 @@ public class FacilityObjectTest {
 
     @Test
     public void listInspectionsTest() {
+        facilityObject.listInspections();
     }
 
     @Test
     public void listActualUsageTest() {
+        List<Usage> usages = facilityObject.listActualUsage();
+        assertEquals(usages, facilityObject.getUsages());
     }
 
     @Test
