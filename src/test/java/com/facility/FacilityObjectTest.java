@@ -1,7 +1,7 @@
 package com.facility;
 
 import com.facility.interfaces.Facility;
-import com.facility.model.FacilityObject;
+import com.facility.model.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -52,10 +52,17 @@ public class FacilityObjectTest {
 
     @Test
     public void addFacilityDetailTest() {
+        facilityObject.addFacilityDetail("", "");
+        assertThat(facilityObject.getFacilityDetails().size(), is(1));
     }
 
     @Test
     public void removeFacilityTest() {
+        Facility newFacility = new FacilityObject(1);
+        facilityObject.addNewFacility(newFacility);
+        assertThat(facilityObject.getFacilities().size(), is(1));
+        facilityObject.removeFacility(newFacility);
+        assertThat(facilityObject.getFacilities().size(), is(0));
     }
 
     @Test
