@@ -6,9 +6,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Date;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
+
 
 public class FacilityObjectTest {
 
@@ -94,10 +96,16 @@ public class FacilityObjectTest {
 
     @Test
     public void makeFacilityMaintRequestTest() {
+        facilityObject.makeFacilityMaintRequest();
+        assertThat(facilityObject.getMaintenanceRequests().size(), is(1));
     }
 
     @Test
     public void scheduleMaintenanceTest() {
+        Date current = new Date();
+        facilityObject.scheduleMaintenance(current);
+        assertThat(facilityObject.getMaintenances().size(), is(1));
+        assertEquals(facilityObject.getMaintenances().get(0).getStart(), current);
     }
 
     @Test
