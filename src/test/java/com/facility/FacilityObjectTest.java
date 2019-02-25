@@ -102,12 +102,22 @@ public class FacilityObjectTest {
 
     @Test
     public void calcMaintenanceCostForFacilityTest() {
+        facilityObject.getMaintenances().add(new Maintenance(null, null, 3));
+        facilityObject.getMaintenances().add(new Maintenance(null, null, 5));
+        facilityObject.getMaintenances().add(new Maintenance(null, null, 5));
+        int result = facilityObject.calcMaintenanceCostForFacility();
+        assertThat(result, is(13));
     }
 
     @Test
     public void calcProblemRateForFacilityTest() {
+        facilityObject.getInspections().add(new Inspection(null, true));
+        facilityObject.getInspections().add(new Inspection(null, true));
+        facilityObject.getInspections().add(new Inspection(null, true));
+        facilityObject.getInspections().add(new Inspection(null, false));
+        String result = facilityObject.calcProblemRateForFacility();
+        assertThat(result, is("75.00"));
     }
-
     @Test
     public void calcDownTimeForFacilityTest() {
     }
