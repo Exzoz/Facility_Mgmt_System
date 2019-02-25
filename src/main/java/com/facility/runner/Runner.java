@@ -40,5 +40,17 @@ public class Runner {
         System.out.println("Maintenance cost: " + facility.calcMaintenanceCostForFacility());
 
 
+        Inspection inspection1 = new Inspection(null, true);
+        facility.getInspections().add(inspection1);
+        System.out.println("Adding inspection:" + inspection1);
+        Inspection inspection2 = new Inspection(null, false);
+        facility.getInspections().add(inspection2);
+        System.out.println("Adding inspection:" + inspection2);
+        Inspection inspection3 = new Inspection(null, false);
+        facility.getInspections().add(inspection3);
+        System.out.println("Adding inspection:" + inspection3);
+        System.out.println("Problem rate: " + facility.calcProblemRateForFacility());
+
+
     }
 }
