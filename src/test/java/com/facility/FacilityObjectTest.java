@@ -111,13 +111,18 @@ public class FacilityObjectTest {
 
     @Test
     public void listMaintRequestsTest() {
+        List<MaintenanceRequest> maintenanceRequests = facilityObject.listMaintRequests();
+        assertEquals(maintenanceRequests, facilityObject.getMaintenanceRequests());
     }
 
     @Test
     public void listMaintenanceTest() {
+        List<Maintenance> maintenances = facilityObject.listMaintenance();
+        assertEquals(maintenances, facilityObject.getMaintenances());
     }
 
     @Test
     public void listFacilityProblemsTest() {
+        List<FacilityProblem> facilityProblems = facilityObject.listFacilityProblems();
+        assertEquals(facilityProblems, facilityObject.getFacilityProblems());
     }
-}
