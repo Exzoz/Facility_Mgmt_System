@@ -1,18 +1,17 @@
 package com.facility;
 
-import com.facility.interfaces.Facility;
+import com.facility.interfaces.*;
 import com.facility.model.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Date;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
-
 
 public class FacilityObjectTest {
 
@@ -162,7 +161,7 @@ public class FacilityObjectTest {
     public void calcDownTimeForFacilityTest() {
         Date date = new Date();
         Calendar cal = Calendar.getInstance(); // creates calendar
-        cal.setTime(date); // sets calendar time and date
+        cal.setTime(date); // sets calendar time/date
         cal.add(Calendar.HOUR_OF_DAY, 5); // adds 5 hours
         Date datePlusFiveHours = cal.getTime();
         Maintenance maintenance = new Maintenance();
@@ -172,5 +171,4 @@ public class FacilityObjectTest {
         long result = facilityObject.calcDownTimeForFacility();
         assertThat(result, is(5L));
     }
-
 }
