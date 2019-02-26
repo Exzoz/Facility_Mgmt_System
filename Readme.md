@@ -20,6 +20,7 @@ Facilities are the building units (buildings and rooms inside) that a company us
 ## To run:
 
 1.) Import to IntellJ or IDE of choice
+
 2.) In the "runner" directory compile and run the "Runner" class
 
 ## Tests:
