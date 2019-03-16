@@ -1,6 +1,6 @@
-package com.facility;
+package com.facility.model;
 
-import com.facility.interfaces.*;
+import com.facility.model.interfaces.*;
 import com.facility.model.*;
 import org.junit.Before;
 import org.junit.Test;

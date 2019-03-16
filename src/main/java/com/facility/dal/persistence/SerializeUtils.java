@@ -1,4 +1,4 @@
-package com.facility.persistence;
+package com.facility.dal.persistence;
 
 import com.facility.model.*;
 

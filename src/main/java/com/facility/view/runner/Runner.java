@@ -1,10 +1,10 @@
-package com.facility.runner;
+package com.facility.view.runner;
 
 import com.facility.model.FacilityObject;
 import com.facility.model.Inspection;
 import com.facility.model.Maintenance;
 import com.facility.model.Usage;
-import com.facility.persistence.SerializeUtils;
+import com.facility.dal.persistence.SerializeUtils;
 
 import java.util.Date;
 
