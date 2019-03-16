@@ -1,9 +1,5 @@
 package com.facility.model;
 
-import com.facility.model.interfaces.Facility;
-import com.facility.model.interfaces.FacilityMaintenance;
-import com.facility.model.interfaces.FacilityUse;
-
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.ArrayList;

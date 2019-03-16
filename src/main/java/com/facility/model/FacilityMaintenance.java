@@ -1,4 +1,4 @@
-package com.facility.model.interfaces;
+package com.facility.model;
 
 import com.facility.model.FacilityProblem;
 import com.facility.model.Maintenance;
