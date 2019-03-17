@@ -1,6 +1,6 @@
 package com.facility.dal.persistence;
 
-import com.facility.model.*;
+import com.facility.model.Facility;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -9,12 +9,12 @@ import java.io.ObjectOutputStream;
 
 public class SerializeUtils {
 
-    public static void saveFacility(FacilityObject facilityObject) {
+    public static void saveFacility(Facility facility) {
         try {
             //save object to file
             FileOutputStream fileOut = new FileOutputStream("save.db");
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            objectOut.writeObject(facilityObject);
+            objectOut.writeObject(facility);
             objectOut.close();
             System.out.println("Object successfully processed to file");
 
@@ -23,12 +23,12 @@ public class SerializeUtils {
         }
     }
 
-    public static FacilityObject loadFacility() {
+    public static Facility loadFacility() {
         try {
-            // reading object from file
+            // read object from file
             FileInputStream fis = new FileInputStream("save.db");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            FacilityObject result = (FacilityObject) ois.readObject();
+            Facility result = (Facility) ois.readObject();
             ois.close();
             return result;
         } catch (Exception ex) {
