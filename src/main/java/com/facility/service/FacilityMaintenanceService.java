@@ -88,7 +88,17 @@ public class FacilityMaintenanceService implements Serializable {
     }
 
     public String calcProblemRateForFacility() {
-
+        int totalInspectionWithProblem = 0;
+        for (Inspection inspection : inspections) {
+            if (inspection.isProblemFound()) {
+                totalInspectionWithProblem++;
+            }
+        }
+        if (totalInspectionWithProblem == 0) {
+            return "0";
+        } else {
+            return Utils.calculatePercentage(totalInspectionWithProblem, inspections.size());
+        }
     }
 
 
