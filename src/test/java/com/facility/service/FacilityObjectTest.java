@@ -1,5 +1,7 @@
-package com.facility.model;
+package com.facility.service;
 
+import com.facility.model.*;
+import org.hamcrest.CoreMatchers;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -69,7 +71,7 @@ public class FacilityObjectTest {
     @Test
     public void assignFacilityToUseTest() {
         facilityObject.assignFacilityToUse();
-        assertThat(facilityObject.getStatus(), is(Status.IN_USE));
+        assertThat(facilityObject.getStatus(), CoreMatchers.is(Status.IN_USE));
     }
 
     @Test
