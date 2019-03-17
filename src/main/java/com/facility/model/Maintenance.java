@@ -9,7 +9,9 @@ public class Maintenance implements Serializable  {
     private Date end;
     private int cost;
 
-    public Maintenance(){}
+    public Maintenance(){
+
+    }
 
     public Maintenance(Date start) {
         this.start = new Date();

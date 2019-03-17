@@ -5,10 +5,12 @@ import java.util.Date;
 
 
 public class Usage implements Serializable {
-    Date startDate;
-    Date endDate;
+    private Date startDate;
+    private Date endDate;
 
-    public Usage() {}
+    public Usage() {
+
+    }
 
     public Usage(Date startDate, Date endDate) {
         this.startDate = startDate;

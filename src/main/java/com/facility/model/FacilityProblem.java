@@ -8,7 +8,8 @@ public class FacilityProblem implements Serializable {
     private String description;
     private boolean solved;
 
-    public FacilityProblem(){}
+    public FacilityProblem(){
+    }
 
     public FacilityProblem(Date created, String description, boolean solved) {
         this.created = created;
