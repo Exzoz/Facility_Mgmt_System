@@ -9,12 +9,12 @@ import java.io.ObjectOutputStream;
 
 public class SerializeUtils {
 
-    public static void saveFacility(Facility facility) {
+    public static void save(Object object) {
         try {
             //save object to file
             FileOutputStream fileOut = new FileOutputStream("save.db");
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            objectOut.writeObject(facility);
+            objectOut.writeObject(object);
             objectOut.close();
             System.out.println("Object successfully processed to file");
 
@@ -23,12 +23,12 @@ public class SerializeUtils {
         }
     }
 
-    public static Facility loadFacility() {
+    public static Object load() {
         try {
             // read object from file
             FileInputStream fis = new FileInputStream("save.db");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            Facility result = (Facility) ois.readObject();
+            Object result = ois.readObject();
             ois.close();
             return result;
         } catch (Exception ex) {

@@ -1,11 +1,11 @@
 package com.facility.view.runner;
 
 
-import com.facility.model.Facility;
-import com.facility.model.Inspection;
-import com.facility.model.Maintenance;
-import com.facility.model.Usage;
+import com.facility.model.*;
 import com.facility.dal.persistence.SerializeUtils;
+import com.facility.service.PersistanceManager;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Date;
 
@@ -52,10 +52,11 @@ public class Runner {
         System.out.println("Problem rate: " + facility.getFacilityMaintenanceService().calcProblemRateForFacility());
 
         System.out.println("Saving facility object: " + facility);
-        SerializeUtils.saveFacility(facility);
+        PersistanceManager persistanceManager = new PersistanceManager();
+        persistanceManager.saveFacility(facility);
 
         System.out.println("Loading facility object");
-        Facility loadedObject = SerializeUtils.loadFacility();
+        Facility loadedObject = persistanceManager.loadFacility();
         System.out.println("Loaded facility object:" + loadedObject);
     }
 }
