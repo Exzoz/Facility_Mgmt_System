@@ -15,6 +15,10 @@ public class FacilityUseService implements Serializable {
     private Status status;
     private List<Usage> usages;
 
+    public FacilityUseService() {
+
+    }
+
     public FacilityUseService(Facility facility) {
         this.facility = facility;
         this.status = Status.FREE;

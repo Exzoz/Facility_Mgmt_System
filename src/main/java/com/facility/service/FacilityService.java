@@ -17,6 +17,10 @@ public class FacilityService implements Serializable {
     private List<Facility> facilities;
     private FacilityInformation facilityInformation;
 
+    public FacilityService() {
+
+    }
+
     public FacilityService(Facility facility, int capacity) {
         this.facility = facility;
         this.facilityDetails = new ArrayList<>();

@@ -15,6 +15,10 @@ public class FacilityMaintenanceService implements Serializable {
     private List<MaintenanceRequest> maintenanceRequests;
     private List<Inspection> inspections;
 
+    public FacilityMaintenanceService() {
+
+    }
+
     public FacilityMaintenanceService(Facility facility) {
         this.facility = facility;
         this.maintenances = new ArrayList<>();
