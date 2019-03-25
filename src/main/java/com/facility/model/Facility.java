@@ -16,6 +16,8 @@ public class Facility implements Serializable {
     private FacilityMaintenanceService facilityMaintenanceService;
     private FacilityUseService facilityUseService;
 
+    public Facility() {}
+
     public Facility(int capacity) {
         this.created = new Date();
         this.facilityService = new FacilityService(this, capacity);
@@ -53,5 +55,15 @@ public class Facility implements Serializable {
 
     public void setFacilityUseService(FacilityUseService facilityUseService) {
         this.facilityUseService = facilityUseService;
+    }
+
+    @Override
+    public String toString() {
+        return "Facility{" +
+                "created=" + created +
+                ", facilityService=" + facilityService +
+                ", facilityMaintenanceService=" + facilityMaintenanceService +
+                ", facilityUseService=" + facilityUseService +
+                '}';
     }
 }
