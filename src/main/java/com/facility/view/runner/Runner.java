@@ -1,6 +1,5 @@
 package com.facility.view.runner;
 
-
 import com.facility.model.*;
 import com.facility.dal.persistence.SerializeUtils;
 import com.facility.service.PersistanceManager;
