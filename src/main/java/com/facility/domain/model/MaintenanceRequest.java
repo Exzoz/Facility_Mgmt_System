@@ -28,5 +28,4 @@ public class MaintenanceRequest implements Serializable {
                 "created=" + created +
                 '}';
     }
-
 }

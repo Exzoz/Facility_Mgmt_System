@@ -4,13 +4,12 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-public class Maintenance implements Serializable  {
+public class Maintenance implements Serializable {
     private Date start;
     private Date end;
     private int cost;
 
-    public Maintenance(){
-
+    public Maintenance() {
     }
 
     public Maintenance(Date start) {
@@ -26,18 +25,23 @@ public class Maintenance implements Serializable  {
     public Date getStart() {
         return start;
     }
+
     public void setStart(Date start) {
         this.start = start;
     }
+
     public Date getEnd() {
         return end;
     }
+
     public void setEnd(Date end) {
         this.end = end;
     }
+
     public int getCost() {
         return cost;
     }
+
     public void setCost(int cost) {
         this.cost = cost;
     }
@@ -50,5 +54,4 @@ public class Maintenance implements Serializable  {
                 ", cost=" + cost +
                 '}';
     }
-
 }

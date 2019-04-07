@@ -9,7 +9,7 @@ public class Usage implements Serializable {
     private Date endDate;
 
     public Usage() {
-
+        this.startDate = new Date();
     }
 
     public Usage(Date startDate, Date endDate) {
@@ -41,5 +41,3 @@ public class Usage implements Serializable {
                 '}';
     }
 }
-
-
