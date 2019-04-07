@@ -3,6 +3,7 @@ package com.facility.domain.service;
 import com.facility.domain.model.Facility;
 import com.facility.domain.model.Status;
 import com.facility.domain.model.Usage;
+import com.facility.domain.service.impl.Utils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
