@@ -1,9 +1,9 @@
-package com.facility.service;
+package com.facility.domain.service;
 
-import com.facility.model.Facility;
-import com.facility.model.Maintenance;
-import com.facility.model.Status;
-import com.facility.model.Usage;
+import com.facility.domain.model.Facility;
+import com.facility.domain.model.Maintenance;
+import com.facility.domain.model.Status;
+import com.facility.domain.model.Usage;
 import org.junit.Before;
 import org.junit.Test;
 

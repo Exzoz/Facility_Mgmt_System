@@ -1,6 +1,6 @@
-package com.facility.service;
+package com.facility.domain.service;
 
-import com.facility.model.*;
+import com.facility.domain.model.*;
 import org.junit.Before;
 import org.junit.Test;
 

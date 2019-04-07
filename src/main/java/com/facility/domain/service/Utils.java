@@ -1,4 +1,4 @@
-package com.facility.service;
+package com.facility.domain.service;
 
 import java.text.DecimalFormat;
 

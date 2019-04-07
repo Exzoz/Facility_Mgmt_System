@@ -1,10 +1,7 @@
 package com.facility.view.runner;
 
-import com.facility.model.*;
-import com.facility.dal.persistence.SerializeUtils;
-import com.facility.service.PersistanceManager;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.facility.domain.model.*;
+import com.facility.domain.service.PersistanceManager;
 
 import java.util.Date;
 

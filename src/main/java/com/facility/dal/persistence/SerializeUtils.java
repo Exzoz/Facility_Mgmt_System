@@ -1,7 +1,5 @@
 package com.facility.dal.persistence;
 
-import com.facility.model.Facility;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;

@@ -1,8 +1,8 @@
-package com.facility.service;
+package com.facility.domain.service;
 
-import com.facility.model.FacilityDetail;
-import com.facility.model.FacilityInformation;
-import com.facility.model.Facility;
+import com.facility.domain.model.FacilityDetail;
+import com.facility.domain.model.FacilityInformation;
+import com.facility.domain.model.Facility;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
-package com.facility.service;
+package com.facility.domain.service;
 
 import com.facility.dal.persistence.SerializeUtils;
-import com.facility.model.Facility;
+import com.facility.domain.model.Facility;
 
 public class PersistanceManager {
 

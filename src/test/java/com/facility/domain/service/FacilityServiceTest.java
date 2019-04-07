@@ -1,7 +1,7 @@
-package com.facility.service;
+package com.facility.domain.service;
 
-import com.facility.model.Facility;
-import com.facility.model.FacilityInformation;
+import com.facility.domain.model.Facility;
+import com.facility.domain.model.FacilityInformation;
 import org.junit.Before;
 import org.junit.Test;
 

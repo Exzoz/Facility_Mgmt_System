@@ -1,6 +1,6 @@
 package com.facility.view.runner;
 
-import com.facility.model.*;
+import com.facility.domain.model.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
