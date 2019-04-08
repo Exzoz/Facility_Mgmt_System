@@ -9,19 +9,15 @@
                 <constructor-arg value="2019-03-24" />
             </bean>
         </property>
-        <property name="facilityService" ref="facilityService"/>
-        <property name="facilityMaintenanceService" ref="facilityMaintenanceService"/>
-        <property name="facilityUseService" ref="facilityUseService"/>
     </bean>
 
-    <bean id="facilityService" class="com.facility.domain.service.FacilityService">
+    <bean id="facilityServiceImpl" class="com.facility.domain.service.impl.FacilityServiceImpl">
         <property name="facility" ref="facility"/>
         <property name="facilityDetails">
             <list>
                 <ref bean="facilityDetail" />
             </list>
         </property>
-        <property name="capacity" value="20" />
         <property name="facilities">
             <list>
                 <ref bean="facility" />
@@ -30,7 +26,7 @@
         <property name="facilityInformation" ref="facilityInformation" />
     </bean>
 
-    <bean id="facilityMaintenanceService" class="com.facility.domain.service.FacilityMaintenanceService">
+    <bean id="facilityMaintenanceServiceImpl" class="com.facility.domain.service.impl.FacilityMaintenanceImpl">
         <property name="facility" ref="facility"/>
         <property name="maintenances">
             <list>
@@ -54,7 +50,7 @@
         </property>
     </bean>
 
-    <bean id="facilityUseService" class="com.facility.domain.service.FacilityUseService">
+    <bean id="facilityUseService" class="com.facility.domain.service.impl.FacilityUseServiceImpl">
         <property name="facility" ref="facility"/>
         <property name="status" value="FREE" />
         <property name="usages">

@@ -12,11 +12,11 @@ public class SpringContextRunner {
         Facility facility = (Facility) context.getBean("facility");
         System.out.println("Facility: " + facility);
         FacilityDetail facilityDetail = (FacilityDetail) context.getBean("facilityDetail");
-        System.out.println("Facility detail: " + facilityDetail);
+        System.out.println("Facility Detail: " + facilityDetail);
         FacilityInformation facilityInformation = (FacilityInformation) context.getBean("facilityInformation");
-        System.out.println("Facility information: " + facilityInformation);
+        System.out.println("Facility Information: " + facilityInformation);
         FacilityProblem facilityProblem = (FacilityProblem) context.getBean("facilityProblem");
-        System.out.println("Facility problem: " + facilityProblem);
+        System.out.println("Facility Problem: " + facilityProblem);
         Inspection inspection = (Inspection) context.getBean("inspection");
         System.out.println("Inspection: " + inspection);
         Maintenance maintenance = (Maintenance) context.getBean("maintenance");
