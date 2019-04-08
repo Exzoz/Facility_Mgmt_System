@@ -10,7 +10,7 @@ public class FacilityWorker implements Observer {
 
     @Override
     public void update(Observable o, Object facility) {
-        System.out.println("Facility worker assigned to facility:" + facility);
+        System.out.println("Facility Worker Assigned To Facility:" + facility);
         this.setAssignedFacility((Facility) facility);
     }
 

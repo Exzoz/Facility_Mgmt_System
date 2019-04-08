@@ -3,25 +3,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="facility" class="com.facility.model.Facility">
+    <bean id="facility" class="com.facility.domain.model.Facility">
         <property name="created">
             <bean factory-bean="dateFormat" factory-method="parse">
                 <constructor-arg value="2019-03-24" />
             </bean>
         </property>
-        <property name="facilityService" ref="facilityService"/>
-        <property name="facilityMaintenanceService" ref="facilityMaintenanceService"/>
-        <property name="facilityUseService" ref="facilityUseService"/>
     </bean>
 
-    <bean id="facilityService" class="com.facility.service.FacilityService">
+    <bean id="facilityServiceImpl" class="com.facility.domain.service.impl.FacilityServiceImpl">
         <property name="facility" ref="facility"/>
         <property name="facilityDetails">
             <list>
                 <ref bean="facilityDetail" />
             </list>
         </property>
-        <property name="capacity" value="20" />
         <property name="facilities">
             <list>
                 <ref bean="facility" />
@@ -30,7 +26,7 @@
         <property name="facilityInformation" ref="facilityInformation" />
     </bean>
 
-    <bean id="facilityMaintenanceService" class="com.facility.service.FacilityMaintenanceService">
+    <bean id="facilityMaintenanceServiceImpl" class="com.facility.domain.service.impl.FacilityMaintenanceImpl">
         <property name="facility" ref="facility"/>
         <property name="maintenances">
             <list>
@@ -54,7 +50,7 @@
         </property>
     </bean>
 
-    <bean id="facilityUseService" class="com.facility.service.FacilityUseService">
+    <bean id="facilityUseService" class="com.facility.domain.service.impl.FacilityUseServiceImpl">
         <property name="facility" ref="facility"/>
         <property name="status" value="FREE" />
         <property name="usages">
@@ -65,7 +61,7 @@
     </bean>
 
 
-    <bean id="facilityDetail" class="com.facility.model.FacilityDetail">
+    <bean id="facilityDetail" class="com.facility.domain.model.FacilityDetail">
         <property name="created">
             <bean factory-bean="dateFormat" factory-method="parse">
                 <constructor-arg value="2019-03-24" />
@@ -75,11 +71,11 @@
         <property name="description" value="Interesting description" />
     </bean>
 
-    <bean id="facilityInformation" class="com.facility.model.FacilityInformation">
+    <bean id="facilityInformation" class="com.facility.domain.model.FacilityInformation">
         <property name="details" value="Facility information details" />
     </bean>
 
-    <bean id="facilityProblem" class="com.facility.model.FacilityProblem">
+    <bean id="facilityProblem" class="com.facility.domain.model.FacilityProblem">
         <property name="created">
             <bean factory-bean="dateFormat" factory-method="parse">
                 <constructor-arg value="2019-03-24" />
@@ -89,7 +85,7 @@
         <property name="solved" value="true" />
     </bean>
 
-    <bean id="inspection" class="com.facility.model.Inspection">
+    <bean id="inspection" class="com.facility.domain.model.Inspection">
         <property name="created">
             <bean factory-bean="dateFormat" factory-method="parse">
                 <constructor-arg value="2019-03-24" />
@@ -98,7 +94,7 @@
         <property name="problemFound" value="true" />
     </bean>
 
-    <bean id="maintenance" class="com.facility.model.Maintenance">
+    <bean id="maintenance" class="com.facility.domain.model.Maintenance">
         <property name="start">
             <bean factory-bean="dateFormat" factory-method="parse">
                 <constructor-arg value="2019-03-24" />
@@ -113,7 +109,7 @@
     </bean>
 
 
-    <bean id="maintenanceRequest" class="com.facility.model.MaintenanceRequest">
+    <bean id="maintenanceRequest" class="com.facility.domain.model.MaintenanceRequest">
         <property name="created">
             <bean factory-bean="dateFormat" factory-method="parse">
                 <constructor-arg value="2019-03-24" />
@@ -121,7 +117,7 @@
         </property>
     </bean>
 
-    <bean id="usage" class="com.facility.model.Usage">
+    <bean id="usage" class="com.facility.domain.model.Usage">
         <property name="startDate">
             <bean factory-bean="dateFormat" factory-method="parse">
                 <constructor-arg value="2019-03-24" />
