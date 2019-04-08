@@ -24,6 +24,9 @@ public class Runner {
         System.out.println("Listing Facilities");
         facilityService.listFacilities();
         FacilityUse facilityUse = new FacilityUseServiceImpl(facility);
+        facilityUse.addFacilityWorker(new FacilityWorker());
+        facilityUse.addFacilityWorker(new FacilityWorker());
+        facilityUse.addFacilityWorker(new FacilityWorker());
         facilityUse.assignFacilityToUse();
 
         System.out.println("Adding Usage");

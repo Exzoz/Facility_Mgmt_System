@@ -3,18 +3,22 @@ package com.facility.domain.service.impl;
 import com.facility.domain.model.Facility;
 import com.facility.domain.model.Status;
 import com.facility.domain.model.Usage;
+import com.facility.domain.model.FacilityWorker;
 import com.facility.domain.service.FacilityUse;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Observable;
 
-public class FacilityUseServiceImpl implements FacilityUse, Serializable {
+public class FacilityUseServiceImpl extends Observable implements FacilityUse, Serializable {
 
     private Facility facility;
     private Status status;
     private List<Usage> usages;
+    private List<FacilityWorker> facilityWorkers;
+
 
     public FacilityUseServiceImpl(){}
 
@@ -22,6 +26,7 @@ public class FacilityUseServiceImpl implements FacilityUse, Serializable {
         this.facility = facility;
         this.status = Status.FREE;
         this.usages = new ArrayList<>();
+        this.facilityWorkers = new ArrayList<>();
     }
 
     public Facility getFacility() {
@@ -38,6 +43,19 @@ public class FacilityUseServiceImpl implements FacilityUse, Serializable {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    @Override
+    public void addFacilityWorker(FacilityWorker worker) {
+        //Add observer
+        addObserver(worker);
+        this.facilityWorkers.add(worker);
+    }
+    @Override
+    public void removeFacilityWorker(FacilityWorker worker) {
+        //Remove observer
+        deleteObserver(worker);
+        this.facilityWorkers.remove(worker);
     }
 
     @Override
@@ -65,9 +83,12 @@ public class FacilityUseServiceImpl implements FacilityUse, Serializable {
         return d.after(min) && d.before(max);
     }
 
+    /* Using observer pattern notify all facility workers assigned to this facility that facility is in use */
     @Override
     public void assignFacilityToUse() {
         this.status = Status.IN_USE;
+        setChanged();
+        notifyObservers(facility);
     }
 
     @Override
@@ -96,5 +117,4 @@ public class FacilityUseServiceImpl implements FacilityUse, Serializable {
     private long differenceBetweenDates(Date startDate, Date endDate) {
         return Math.abs(endDate.getTime() - startDate.getTime());
     }
-
 }
