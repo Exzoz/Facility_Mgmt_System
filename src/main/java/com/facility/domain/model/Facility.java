@@ -16,6 +16,40 @@ public class Facility implements Serializable {
         this.capacity = capacity;
     }
 
+    public Facility(Builder builder) {
+        this.created = builder.created;
+        this.capacity = builder.capacity;
+    }
+
+    // Static class Builder
+    public static class Builder {
+        /// instance fields
+        private Date created;
+        private int capacity;
+
+        public static Builder newInstance() {
+            return new Builder();
+        }
+
+        private Builder() {}
+
+        // Setter methods
+        public Builder setCreated(Date created) {
+            this.created = created;
+            return this;
+        }
+        public Builder setCapacity(int capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+
+        // build method to deal with outer class to return outer instance
+        public Facility build() {
+            return new Facility(this);
+        }
+    }
+
+
     public Date getCreated() {
         return created;
     }
