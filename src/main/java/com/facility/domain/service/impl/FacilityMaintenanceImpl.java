@@ -114,8 +114,10 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance, Serializabl
     public long calcDownTimeForFacility() {
         //it will return number in hours
         long total = 0;
+        MaintenanceVisitor visitor =  new MaintenanceVisitor();
         for (Maintenance maintenance : maintenances) {
-            total += (maintenance.getEnd().getTime() - maintenance.getStart().getTime()) / 1000;
+            maintenance.accept(visitor);
+            total += visitor.getMaintenanceDowntime();
         }
         return total / 3600;
     }
