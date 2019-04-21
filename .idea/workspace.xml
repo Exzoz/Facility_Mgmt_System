@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebe987e0-ae83-4e37-beef-ebc79e9adbb7" name="Default Changelist" comment="rearranged UML and expanded strategy">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/facility/domain/model/MaintenanceVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/facility/domain/model/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/facility/domain/model/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/facility/domain/model/Maintenance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/facility/domain/model/Maintenance.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -41,7 +42,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="1" />
-          <entry key="java" value="338" />
+          <entry key="java" value="341" />
           <entry key="png" value="2" />
           <entry key="xml" value="10" />
         </counts>
@@ -49,7 +50,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="338" />
+          <entry key="JAVA" value="341" />
           <entry key="XML" value="11" />
         </counts>
       </usages-collector>
@@ -76,26 +77,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/model/Maintenance.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/model/MaintenanceRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#682#683#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#740#741#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/model/MaintenanceVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -427,7 +430,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/facility/persistence/SerializeUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/facility/runner/Runner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/facility/model/MaintenanceRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/facility/interfaces/Facility.java" />
@@ -478,6 +480,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/facility/domain/service/impl/FacilityUseServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/facility/domain/model/Facility.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/facility/domain/model/Maintenance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/facility/domain/model/MaintenanceVisitor.java" />
       </list>
     </option>
   </component>
@@ -637,7 +640,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554933660109" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555811372166" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -790,7 +793,7 @@
       <workItem from="1550792827460" duration="1292000" />
       <workItem from="1552349756949" duration="139000" />
       <workItem from="1552777426679" duration="33735000" />
-      <workItem from="1555011973243" duration="1306000" />
+      <workItem from="1555011973243" duration="2813000" />
     </task>
     <task id="LOCAL-00001" summary="fac and ficdetail updates">
       <created>1550800537821</created>
@@ -870,7 +873,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72762000" />
+    <option name="totallyTimeSpent" value="74269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1342" height="877" extended-state="0" />
@@ -997,16 +1000,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/service/FacilityUseService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/service/FacilityMaintenanceService.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/facility/domain/service/FacilityMaintenanceServiceTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/model/MaintenanceRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/model/Status.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1283,23 +1276,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/model/Maintenance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/model/MaintenanceRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/facility/domain/model/MaintenanceVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
           </folding>
         </state>
       </provider>

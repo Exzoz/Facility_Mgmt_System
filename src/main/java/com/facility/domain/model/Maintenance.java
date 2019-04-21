@@ -1,5 +1,4 @@
 package com.facility.domain.model;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -53,5 +52,9 @@ public class Maintenance implements Serializable {
                 ", end=" + end +
                 ", cost=" + cost +
                 '}';
+    }
+
+    public void accept(MaintenanceVisitor visitor) {
+        visitor.visit(this);
     }
 }
