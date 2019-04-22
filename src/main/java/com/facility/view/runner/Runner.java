@@ -18,9 +18,9 @@ public class Runner {
         System.out.println("Create New Facility");
         Facility facility = new Facility(20);
         FacilityService facilityService = new FacilityServiceImpl(facility);
-        facilityService.addNewFacility(new Facility(1));
-        facilityService.addNewFacility(new Facility(2));
-        facilityService.addNewFacility(new Facility(3));
+        facilityService.addNewFacility(Facility.Builder.newInstance().setCapacity(1).setCreated(new Date()).build());
+        facilityService.addNewFacility(Facility.Builder.newInstance().setCapacity(2).setCreated(new Date()).build());
+        facilityService.addNewFacility(Facility.Builder.newInstance().setCapacity(3).setCreated(new Date()).build());
         System.out.println("Listing Facilities");
         facilityService.listFacilities();
         FacilityUse facilityUse = new FacilityUseServiceImpl(facility);
