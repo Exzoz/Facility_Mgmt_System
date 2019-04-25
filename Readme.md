@@ -18,12 +18,4 @@ Comp 373/473 Project 1: Facility Management System Design and Implementation
 ## System Description:
 Facilities are the building units (buildings and rooms inside) that a company uses to support the activities of the business. This system will support the management of buildings, their constant use, and maintenance support when it is needed. The following are the three main functionalities of this system:
 
-## To run:
 
-1.) Import to IntellJ or IDE of choice
-
-2.) In the "runner" directory compile and run the "Runner" class
-
-## Tests:
-
-1.) In the "Test" directory compile and run the "FacilityObjectTest"
